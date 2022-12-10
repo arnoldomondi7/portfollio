@@ -9,14 +9,130 @@
 /* DEVELOP THE CSS VARIABLES. */
 /* ROOT ==> CAN BE USED ANYWHERE IN THE APPLICATION. */
 :root {
-	--color-bg: #8b8b8b;
-	--color-bg-variant: #2c2c6c;
-	--color-primary: #4db5ff;
-	--color-primary-variant: rgba(77, 181, 255, 0.4);
-	--color-white: #fff;
-	--color-light: rgba(255, 255, 255, 0.6);
+	--color-bg: #fff;
+	--color-primary: #000000d3;
+	--color-black: #000;
+	--color-light: #05050599;
 
 	--container-width-lg: 75%;
-	--container-width-md: 75%;
-	--container-width-sm: 75%;
+	--container-width-md: 86%;
+	--container-width-sm: 90%;
+
+	--transition: all 0.5s ease;
+}
+
+/* All The Html Elements */
+html {
+	scroll-behavior: smooth;
+}
+
+/* dissable the scroll effect. */
+::-webkit-scrollbar {
+	display: none;
+}
+
+/* body section */
+body {
+	background-color: var(--color-bg);
+	color: var(--color-black);
+	line-height: 1.7;
+}
+
+/* General Styles */
+
+.container {
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+
+/* HANDLE THE HEADERS */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+/* HANDLE THE SECTION */
+section {
+	margin-top: 8rem;
+}
+
+section > h2,
+section > h5 {
+	text-align: center;
+	color: var(--color-light);
+}
+
+section > h2 {
+	color: var(--color-primary);
+}
+
+.text-light {
+	color: var(--color-light);
+}
+
+a {
+	color: var(--color-black);
+	transition: var(--transition);
+}
+
+a:hover {
+	color: var(--color-light);
+}
+
+.btn {
+	width: max-content;
+	display: inline-block; /* align itmes horizontaly */
+	color: var(--color-black);
+	padding: 0.1rem 1rem;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	border: 1px solid var(--color-black);
+	transition: var(--transition);
+}
+
+.btn:hover {
+	background-color: var(--color-black);
+	color: var(--color-bg);
+}
+
+.btn-primary {
+	background-color: var(--color-bg);
+	color: var(--color-black);
+}
+
+img {
+	display: block; /* takes the whole space */
+	width: 100%;
+	object-fit: cover;
+}
+
+/* media querries */
+
+/* medium screens */
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+
+	section {
+		margin-top: 6rem;
+	}
+}
+
+/* small screens */
+@media screen and (max-width: 600px) {
+	.container {
+		width: var(--container-width-sm);
+	}
+
+	section > h2 {
+		margin-bottom: 2rem;
+	}
 }

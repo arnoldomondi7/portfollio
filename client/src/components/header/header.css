@@ -1,0 +1,67 @@
+header {
+	height: 100vh;
+	padding-top: 2rem;
+	overflow: hidden;
+}
+
+.header-container {
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+
+/* CALL TO ACTIONS */
+.c-t-a {
+	margin-top: 2.5rem;
+	display: flex;
+	justify-content: center;
+	gap: 1.3rem;
+}
+
+/* HEADER SOCIALS */
+.header-socials {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.8rem;
+	position: absolute;
+	left: 0;
+	bottom: 3rem;
+}
+
+.me-port {
+	border-radius: 50%;
+	width: 19rem;
+	height: 19rem;
+	object-fit: cover;
+	position: absolute;
+	left: calc(50% - 11rem);
+	margin-top: 3.9rem;
+}
+
+.scrol-down {
+	position: absolute;
+	right: -2rem;
+	bottom: 3rem;
+	font-weight: bolder;
+	font-size: 1.4rem;
+}
+
+/* MAKE IT RESPONSIVE */
+/* medium screens */
+@media screen and (max-width: 1024px) {
+	header {
+		height: 68vh;
+	}
+}
+/* small screens */
+@media screen and (max-width: 600px) {
+	header {
+		height: 100vh;
+	}
+
+	.header-socials,
+	.scrol-down {
+		display: none;
+	}
+}
