@@ -7,9 +7,9 @@ import { BsArrowDown } from 'react-icons/bs'
 
 const Header = () => {
 	return (
-		<header>
+		<header id='header'>
 			<div className='container header-container'>
-				<h3>Hi, Am Arnold Omondi.</h3>
+				<h3>Hi, Am Arnold :)</h3>
 				<h2>A Fullstack Web Developer.</h2>
 				<h2>
 					I Help Businesses Optimize Profits, By Developing Scalable Web
